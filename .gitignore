@@ -10,3 +10,8 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+en.json
+ja.json
+ko.json
+zh-cn.json
+zh-tw.json
