@@ -6,6 +6,9 @@
 * ` export GOOGLE_APPLICATION_CREDENTIALS="[PATH]" `
 * Ex: ` export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/service-account-file.json" `
 
+## execute
+* go run translate.go
+
 ## translateJSON function
 * func translateJSON(source []byte, target []byte, targetLanguage string) ([]byte, error)
   > * source : the source JSON file
