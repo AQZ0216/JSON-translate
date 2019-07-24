@@ -66,7 +66,7 @@ func translateInterface(source interface{}, target interface{}, targetLanguage s
 					return target, err
 				}
 
-				// process "{...}""
+				// process "{...}"
 				targetLeftIdx := 0
 				srcLeftIdx := 0
 				targetRightIdx := 0
@@ -80,6 +80,10 @@ func translateInterface(source interface{}, target interface{}, targetLanguage s
 						targetStr = targetStr[:targetLeftIdx] + srcStr[srcLeftIdx:srcRightIdx] + targetStr[targetRightIdx:]
 					}
 				}
+
+				// replace &lt; by <
+				targetStr = strings.Replace(targetStr, "&lt;", "<", -1)
+
 				targetMap[k] = targetStr
 				fmt.Println(v, ", ", targetMap[k])
 			}
